@@ -2,9 +2,13 @@ public class Filme {
     String nome;
     int anoDeLancamento;
     boolean incluidoNoPlano;
-    double somaDasAvaliacoes;
-    int totalDeAvaliacoes;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
     int duracaoEmMinutos;
+
+    int getTotalDeAvaliacoes(){
+        return totalDeAvaliacoes;
+    }
 
     void exibeFichaTecnica() {
         //imprimindo características do objeto meuFilme (iremos utilizar na Main)
