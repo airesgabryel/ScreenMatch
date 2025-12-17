@@ -1,0 +1,66 @@
+package br.com.alura.screenmatch.modelos;
+
+public class Filme {
+    private String nome;
+    private int anoDeLancamento;
+    private boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
+    private int duracaoEmMinutos;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
+    public int getTotalDeAvaliacoes(){
+        return totalDeAvaliacoes;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public void exibeFichaTecnica() {
+        //imprimindo características do objeto meuFilme (iremos utilizar na Main)
+        System.out.println("Nome: " + nome);
+        System.out.println("Ano: " + anoDeLancamento);
+        System.out.println("Duração: " + duracaoEmMinutos);
+
+    }
+
+    public void avalia(double nota){
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
+    }
+
+    // metodo sem void pois retorna decimal
+    public double pegaMedia(){
+        //para pegar um valor, utilizamos RETURN
+        return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
+
+}

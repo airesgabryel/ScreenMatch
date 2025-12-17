@@ -1,15 +1,12 @@
+import br.com.alura.screenmatch.modelos.Filme;
+
 public class Principal {
     static void main(String[] args) {
-
-        //utilizando a classe para criar uma variável
         Filme meuFilme = new Filme();
-        //esquerda referenciando variável
-        //direita guarda objeto
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
 
-        //definindo atributos
-        meuFilme.nome = "O poderoso chefão";
-        meuFilme.anoDeLancamento = 1970;
-        meuFilme.duracaoEmMinutos = 180;
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(5);
