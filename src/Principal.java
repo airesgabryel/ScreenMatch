@@ -67,6 +67,11 @@ public class Principal {
         listaDeFilmes.add(outroFilme);
         System.out.println("Tamanho da Lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());//pegando primeiro filme [0]
+        for (int i = 0; i < 3; i++) {
+            System.out.println(listaDeFilmes.get(i).getNome());
+
+        }//imprimindo array inteiro
+
 
 
     }
