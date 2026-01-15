@@ -8,8 +8,7 @@ import java.util.ArrayList;
 
 public class Principal {
     static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
+        Filme meuFilme = new Filme("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
@@ -34,8 +33,7 @@ public class Principal {
         calculadora.inclui(meuFilme);
         System.out.println("Tempo total: " + calculadora.getTempoTotal());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
+        Filme outroFilme = new Filme("Avatar");
         outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
         calculadora.inclui(outroFilme);
@@ -52,10 +50,10 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeDoPaulo = new Filme();
+        Filme filmeDoPaulo = new Filme("Dogville");
         //podemos trocar Filme por [var] para fazer inferência do tipo declarado
         //serve para simplificar (não cria variável).
-        filmeDoPaulo.setNome("Dogville");
+        //filmeDoPaulo.setNome("Dogville");
         filmeDoPaulo.setDuracaoEmMinutos(200);
         filmeDoPaulo.setAnoDeLancamento(2000);
         filmeDoPaulo.avalia(10);
