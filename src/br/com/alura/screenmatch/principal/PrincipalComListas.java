@@ -4,10 +4,7 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PrincipalComListas {
     static void main(String[] args) {
@@ -23,6 +20,7 @@ public class PrincipalComListas {
         Filme f1 = filmeDoPaulo; // <-- variável de referência
 
         ArrayList<Titulo> lista = new ArrayList<>();
+        //podemos utilizar List no lugar de ArrayList, basta importar o método
         lista.add(filmeDoPaulo);
         lista.add(meuFilme);
         lista.add(outroFilme);
@@ -35,7 +33,7 @@ public class PrincipalComListas {
         }
 
         //ordenando ArrayList.
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        List<String> buscaPorArtista = new ArrayList<>();
         buscaPorArtista.add("Adam Sandler");
         buscaPorArtista.add("Gabryel");
         buscaPorArtista.add("Wattson");
@@ -51,12 +49,15 @@ public class PrincipalComListas {
         for (int i = 0; i < lista.size(); i++) {
             System.out.println(lista.get(i).getNome() + ", " + lista.get(i).getAnoDeLancamento());
         }
-
         System.out.println();
         System.out.println("Nova lista ordenada por ano: ");
         lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
         for (int i = 0; i < lista.size(); i++) {
             System.out.print(lista.get(i).getNome() + " " + lista.get(i).getAnoDeLancamento() + ", ");
         }
+
+
+
+
     }
 }
