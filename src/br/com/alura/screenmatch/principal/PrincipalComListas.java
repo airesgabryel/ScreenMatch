@@ -32,12 +32,14 @@ public class PrincipalComListas {
             }
         }
 
+
         //ordenando ArrayList.
         List<String> buscaPorArtista = new ArrayList<>();
         buscaPorArtista.add("Adam Sandler");
         buscaPorArtista.add("Gabryel");
         buscaPorArtista.add("Wattson");
         buscaPorArtista.add("Jacqueline");
+
 
         System.out.println(buscaPorArtista);
         Collections.sort(buscaPorArtista);
