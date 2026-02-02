@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Titulo implements Comparable<Titulo>{
+public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -29,7 +29,7 @@ public class Titulo implements Comparable<Titulo>{
         return duracaoEmMinutos;
     }
 
-    public int getTotalDeAvaliacoes(){
+    public int getTotalDeAvaliacoes() {
         return totalDeAvaliacoes;
     }
 
@@ -41,20 +41,17 @@ public class Titulo implements Comparable<Titulo>{
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
-        this.duracaoEmMinutos = duracaoEmMinutos;
-    }
-
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
         this.incluidoNoPlano = incluidoNoPlano;
     }
 
-    public void exibeFichaTecnica() {
-        //imprimindo características do objeto meuFilme (iremos utilizar na Main)
-        System.out.println("Nome: " + nome);
-        System.out.println("Ano: " + anoDeLancamento);
-        System.out.println("Duração: " + duracaoEmMinutos);
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
 
+    public void exibeFichaTecnica(){
+        System.out.println("Nome do filme: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
     }
 
     public void avalia(double nota){
@@ -62,9 +59,7 @@ public class Titulo implements Comparable<Titulo>{
         totalDeAvaliacoes++;
     }
 
-    // metodo sem void pois retorna decimal
     public double pegaMedia(){
-        //para pegar um valor, utilizamos RETURN
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
